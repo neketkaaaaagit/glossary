@@ -1,0 +1,12 @@
+
+services:
+  glossary:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=sqlite:///./glossary.db
+    container_name: glossary_api
